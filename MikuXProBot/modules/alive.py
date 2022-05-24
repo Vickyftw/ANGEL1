@@ -18,10 +18,10 @@ from pyrogram import __version__ as pyro
 
 edit_time = 5
 """ =======================CONSTANTS====================== """
-file1 = "https://telegra.ph/file/f1e9b94decb547cb45cab.jpg"
-file2 = "https://telegra.ph/file/c5b6c0a3a6832efc08e5b.jpg"
-file3 = "https://telegra.ph/file/1dbcdedfc78d0318a288b.jpg"
-file4 = "https://telegra.ph/file/ac522b519f77a1054e9e9.jpg"
+file1 = "https://telegra.ph/file/29066bcd398b0725199a0.jpg"
+file2 = "https://telegra.ph/file/1ced14636a984d2f7b470.jpg"
+file3 = "https://telegra.ph/file/aa4f2c35d4e672f468c6a.jpg"
+file4 = "https://telegra.ph/file/8e9b5acd0e2d76a39bba7.jpg"
 """ =======================CONSTANTS====================== """
 
 START_TIME = datetime.utcnow()
@@ -58,7 +58,7 @@ async def hmm(yes):
     Miku += f"♡ **Pyrogram Version** ~♪ `{pyro}`\n\n"
     Miku += f"♡ **My Master** ~♪ [{OWNER_NAME}](tg://user?id={OWNER_ID})\n\n"
     Miku += f"Thanks For Adding Me In {yes.chat.title}"
-    BUTTON = [[Button.url("Support Chat", "https://t.me/MikusSupport"), Button.url("Updates Channel", "https://t.me/Pegasusupdates")]]
+    BUTTON = [[Button.url("Support Chat", "https://t.me/angelsupports"), Button.url("Updates Channel", "https://t.me/angelupdates")]]
     on = await borg.send_file(yes.chat_id, file=file2,caption=Miku, buttons=BUTTON)
 
     await asyncio.sleep(edit_time)
@@ -85,5 +85,5 @@ async def hmm(yes):
 @register(pattern=("/repo"))
 async def repo(event):
     Miku = f"**Hey [{event.sender.first_name}](tg://user?id={event.sender.id}), Click The Button Below To Get My Repo**\n\n"
-    BUTTON = [[Button.url("[► Support ◄]", "https://t.me/MikusSupport"), Button.url("[► Repo ◄]", "https://github.com/h0daka/Miku-Nakano")]]
-    await borg.send_file(event.chat_id, file="https://telegra.ph/file/c5b6c0a3a6832efc08e5b.jpg", caption=Miku, buttons=BUTTON)
+    BUTTON = [[Button.url("[► Support ◄]", "https://t.me/angelsupports"), Button.url("[► Repo ◄]", "https://github.com")]]
+    await borg.send_file(event.chat_id, file="https://telegra.ph/file/fe2cb7ae42e30a2b8c42a.jpg", caption=Miku, buttons=BUTTON)
