@@ -55,42 +55,42 @@ def inlinequery(update: Update, _) -> None:
             "description": "Look up a person/bot/channel/chat on @Intellivoid SpamProtection API",
             "message_text": "Click the button below to look up a person/bot/channel/chat on @Intellivoid SpamProtection API using "
                             "username or telegram id",
-            "thumb_urL": "https://telegra.ph/file/e7bb5cf8dca5c2916128d.jpg",
+            "thumb_urL": "https://telegra.ph/file/f782720927381c6e26783.jpg",
             "keyboard": ".spb ",
         },
         {
-            "title": "Account info on Miku",
+            "title": "Account info on Angel",
             "description": "Look up a Telegram account in Miku database",
-            "message_text": "Click the button below to look up a person in Miku database using their Telegram ID",
-            "thumb_urL": "https://telegra.ph/file/d687f2d9867d7edfa0506.jpg",
+            "message_text": "Click the button below to look up a person in Angel database using their Telegram ID",
+            "thumb_urL": "https://telegra.ph/file/b6b6d37ef00603df9bd99.jpg",
             "keyboard": ".info ",
         },
         {
             "title": "About",
-            "description": "Know about Miku",
-            "message_text": "Click the button below to get to know about Miku.",
-            "thumb_urL": "https://telegra.ph/file/99d8f926d6b99c6cb826c.jpg",
+            "description": "Know about Angel",
+            "message_text": "Click the button below to get to know about Angel.",
+            "thumb_urL": "https://telegra.ph/file/cec8b2f2df1128663a82c.jpg",
             "keyboard": ".about ",
         },
         {
             "title": "Help",
             "description": "Help Inline Commands",
             "message_text": "Click the button below to get Help Of Inline Commands.",
-            "thumb_urL": "https://telegra.ph/file/65a47304643fcdb34f0a7.jpg",
+            "thumb_urL": "https://telegra.ph/file/f96f3bf68709212a96bba.jpg",
             "keyboard": ".help ",
         },
         {
             "title": "Anilist",
             "description": "Search anime and manga on AniList.co",
             "message_text": "Click the button below to search anime and manga on AniList.co",
-            "thumb_urL": "https://telegra.ph/file/561a53ed2800f4dccbe30.jpg",
+            "thumb_urL": "https://telegra.ph/file/21c0f66e65082384c761a.jpg",
             "keyboard": ".anilist ",
         },
         {
             "title": "Paste",
             "description": "Paste <text> on pastebin.",
             "message_text": "Click the button below to Paste on pastebin.",
-            "thumb_urL": "https://telegra.ph/file/561a53ed2800f4dccbe30.jpg",
+            "thumb_urL": "https://telegra.ph/file/f1912776dda151964fd53.jpg",
             "keyboard": ".paste ",
         },
     ]
@@ -212,7 +212,7 @@ def inlineinfo(query: str, update: Update, context: CallbackContext) -> None:
             [
                 InlineKeyboardButton(
                     text="Report Error",
-                    url=f"https://t.me/MikusSupport",
+                    url=f"https://t.me/angelsupports",
                 ),
                 InlineKeyboardButton(
                     text="Search again",
@@ -226,7 +226,7 @@ def inlineinfo(query: str, update: Update, context: CallbackContext) -> None:
     results = [
         InlineQueryResultArticle(
             id=str(uuid4()),
-            thumb_url="https://telegra.ph/file/d687f2d9867d7edfa0506.jpg",
+            thumb_url="https://telegra.ph/file/0270aa22d8c6ce8ad491e.jpg",
             title=f"User info of {html.escape(user.first_name)}",
             input_message_content=InputTextMessageContent(text, parse_mode=ParseMode.HTML,
                                                           disable_web_page_preview=True),
@@ -244,7 +244,7 @@ def about(query: str, update: Update, context: CallbackContext) -> None:
     user = context.bot.get_chat(user_id)
     sql.update_user(user.id, user.username)
     about_text = f"""
-    [Miku ❤️](https://t.me/MikuXproBot)\n*Bot State:* `Alive`\n*Python:* `{python_version()}`\n*Pyrogram:* `{pyrover}`\n*Platform:* `{sys.platform}`\n*python-telegram-bot:* `v{str(__version__)}`
+    [ANGEL ❤️](https://t.me/AngelxRobot)\n*Bot State:* `Alive`\n*Python:* `{python_version()}`\n*Pyrogram:* `{pyrover}`\n*Platform:* `{sys.platform}`\n*python-telegram-bot:* `v{str(__version__)}`
     """
     results: list = []
     kb = InlineKeyboardMarkup(
@@ -263,8 +263,8 @@ def about(query: str, update: Update, context: CallbackContext) -> None:
             id=str(uuid4()),
             title="Alive",
             description="Check Bot's Stats",
-            thumb_url="https://telegra.ph/file/396d27f7cba3f83efceab.jpg",
-            photo_url="https://telegra.ph/file/55669ba6d3475e5d77e8d.jpg",
+            thumb_url="https://telegra.ph/file/1d48acf76800bc82e867a.jpg",
+            photo_url="https://telegra.ph/file/c641abcfbd0169b7ed48e.jpg",
             caption=about_text,
             parse_mode=ParseMode.MARKDOWN,
             reply_markup=kb,
@@ -331,7 +331,7 @@ def spb(query: str, update: Update, context: CallbackContext) -> None:
             [
                 InlineKeyboardButton(
                     text="Report Error",
-                    url=f"https://t.me/MikusSupport",
+                    url=f"https://t.me/angelsupports",
                 ),
                 InlineKeyboardButton(
                     text="Search again",
@@ -346,7 +346,7 @@ def spb(query: str, update: Update, context: CallbackContext) -> None:
         InlineQueryResultArticle(
             id=str(uuid4()),
             title=f"SpamProtection API info of {srdata or a}",
-            thumb_url="https://telegra.ph/file/e7bb5cf8dca5c2916128d.jpg",
+            thumb_url="https://telegra.ph/file/8880f60b05b20984077e5.jpg",
             input_message_content=InputTextMessageContent(stats, parse_mode=ParseMode.MARKDOWN,
                                                           disable_web_page_preview=True),
             reply_markup=kb
@@ -476,7 +476,7 @@ def media_query(query: str, update: Update, context: CallbackContext) -> None:
                 [
                     InlineKeyboardButton(
                         text="Report error",
-                        url="https://t.me/MikusSupport",
+                        url="https://t.me/angelsupports",
                     ),
                     InlineKeyboardButton(
                         text="Search again",
@@ -508,7 +508,7 @@ def help(query: str, update: Update, context: CallbackContext) -> None:
     user = context.bot.get_chat(user_id)
     sql.update_user(user.id, user.username)
     help_text = f"""
-    [Miku Inline Help❤️](https://t.me/MikuXproBot)\n*Inline Help Commands:*\n*• .about:* `You Can Check My Information`\n*• .spbinfo* `To Check Your Spam Protection With Spam Protection Api`\n*• .anilist:* `To Search Animes And Mangas`\n*• .info:* `To Check Your Information`
+    [Miku Inline Help❤️](https://t.me/AngelxRobot)\n*Inline Help Commands:*\n*• .about:* `You Can Check My Information`\n*• .spbinfo* `To Check Your Spam Protection With Spam Protection Api`\n*• .anilist:* `To Search Animes And Mangas`\n*• .info:* `To Check Your Information`
     """
     results: list = []
     kb = InlineKeyboardMarkup(
@@ -526,8 +526,8 @@ def help(query: str, update: Update, context: CallbackContext) -> None:
         InlineQueryResultPhoto(
             id=str(uuid4()),
             title="Help Commands",
-            thumb_url="https://telegra.ph/file/65a47304643fcdb34f0a7.jpg",
-            photo_url="https://telegra.ph/file/65a47304643fcdb34f0a7.jpg",
+            thumb_url="https://telegra.ph/file/f96f3bf68709212a96bba.jpg",
+            photo_url="https://telegra.ph/file/f96f3bf68709212a96bba.jpg",
             caption=help_text,
             parse_mode=ParseMode.MARKDOWN,
             reply_markup=kb,
