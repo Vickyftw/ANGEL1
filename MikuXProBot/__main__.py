@@ -56,18 +56,18 @@ def get_readable_time(seconds: int) -> str:
 buttons = [
     [
                         InlineKeyboardButton(
-                             text="🏹 Summon Me",
-                             url="https://t.me/MikuXProBot?startgroup=true"),
+                             text="👸 Add Angel to Group",
+                             url="https://t.me/AngelxRobot?startgroup=true"),
                         InlineKeyboardButton(
-                             text="🗞️ Repo",
-                             url="https://github.com/h0daka/Miku-Nakano"),
+                             text="❤️📎 Supports",
+                             url="https://github.com"),
                     ],
                    [                  
                        InlineKeyboardButton(
                              text="🔐 Help",
                              callback_data="help_back"),
                         InlineKeyboardButton(
-                             text=" 💫 About Me",
+                             text="💫 About Me",
                              callback_data="miku_"),
                     ], 
     ]
@@ -81,7 +81,7 @@ HELP_STRINGS = """
  • /settings:
    • in PM: will send you your settings for all supported modules.
    • in a group: will redirect you to pm, with all that chat's settings.
-For all command use /* [or](https://telegra.ph/file/85a404cf9edbd797c829f.jpg) *!*
+For all command use /* [or](https://telegra.ph/file/0270aa22d8c6ce8ad491e.jpg) *!*
 """.format(
     dispatcher.bot.first_name,""
     if not ALLOW_EXCL else "\nAll commands can either be used with / or !.\nKindly use ! for commands if / is not working\n")
@@ -213,11 +213,11 @@ def start(update: Update, context: CallbackContext):
                 [
                   [                  
                        InlineKeyboardButton(
-                             text="🚑 Support",
-                             url=f"https://t.me/MikusSupport"),
+                             text="👨‍🔧 Support",
+                             url=f"https://t.me/angelsupports"),
                        InlineKeyboardButton(
-                             text="🛰️ Updates",
-                             url="https://t.me/MikuXUpdates")
+                             text="♻️ Updates",
+                             url="https://t.me/angelupdates")
                      ] 
                 ]
             ),
@@ -275,7 +275,7 @@ def help_button(update, context):
                 reply_markup=InlineKeyboardMarkup([[InlineKeyboardButton(text="Back",
                                        callback_data="help_back"),
                   InlineKeyboardButton(text="Support",
-                                       url="t.me/Mikussupport")]]))
+                                       url="t.me/angelsupports")]]))
 
         elif prev_match:
             curr_page = int(prev_match.group(1))
@@ -323,17 +323,17 @@ def miku_callback_data(update, context):
                  \n❍ I have a note keeping system, blacklists, and even predetermined replies on certain keywords.
                  \n❍ I check for admins' permissions before executing any command and more stuffs
                  \n❍ Miku licensed under the GNU General Public License v3.0
-                 \n❍ If you have any question about Miku, let us know at [Miku Support](t.me/{SUPPORT_CHAT}).""",
+                 \n❍ If you have any question about Angel, let us know at [Angel Support](t.me/{SUPPORT_CHAT}).""",
             parse_mode=ParseMode.MARKDOWN,
             disable_web_page_preview=True,
             reply_markup=InlineKeyboardMarkup(
                 [
                  [
-                    InlineKeyboardButton(text="🌏 My Master", url="t.me/h0daka"),
+                    InlineKeyboardButton(text="🌎📎❤️ My Creator", url="t.me/Lost_Kiddo"),
                     InlineKeyboardButton(text="✨ Try Inline", switch_inline_query_current_chat="",),
                  ],
                  [
-                    InlineKeyboardButton(text="🕊️ Updates", url="t.me/MikuXUpdates"),
+                    InlineKeyboardButton(text="♻️ Updates", url="t.me/MikuXUpdates"),
                     InlineKeyboardButton(text="🚑 Support", url="t.me/Mikussupport"),
                  ],
                  [
@@ -382,7 +382,7 @@ def get_help(update: Update, context: CallbackContext):
             reply_markup=InlineKeyboardMarkup(
                 [
                   [
-                  InlineKeyboardButton(text=" Click here", url="https://t.me/MikuXProBot?start=help")
+                  InlineKeyboardButton(text=" Click here", url="https://t.me/AngelxRobot?start=help")
                   ]
                 ]
             ),
@@ -399,7 +399,7 @@ def get_help(update: Update, context: CallbackContext):
                 [[InlineKeyboardButton(text="Back",
                                        callback_data="help_back"),
                   InlineKeyboardButton(text="Support",
-                                       url="t.me/Mikussupport")]]))
+                                       url="t.me/angelsupports")]]))
 
     else:
         send_help(chat.id, HELP_STRINGS)
@@ -548,7 +548,7 @@ def donate(update: Update, context: CallbackContext):
             parse_mode=ParseMode.MARKDOWN,
             disable_web_page_preview=True)
 
-        if OWNER_ID != 5291415314 and DONATION_LINK:
+        if OWNER_ID != 2005952005 and DONATION_LINK:
             update.effective_message.reply_text(
                 "You can also donate to the person currently running me "
                 "[here]({})".format(DONATION_LINK),
@@ -598,14 +598,14 @@ def main():
                   [                  
                        InlineKeyboardButton(
                              text="[► Summon Me◄]",
-                             url="https://t.me/MikuXProBot?startgroup=true")
+                             url="https://t.me/AngelxRobot?startgroup=true")
                      ] 
                 ]
             ),
         ) 
         except Unauthorized:
             LOGGER.warning(
-                "Miku can't able to send message to support_chat, go and check!")
+                "Angel can't able to send message to support_chat, go and check!")
         except BadRequest as e:
             LOGGER.warning(e.message)
 
@@ -648,7 +648,7 @@ def main():
             updater.bot.set_webhook(url=URL + TOKEN)
 
     else:
-        LOGGER.info("Finally Miku Is In Online")
+        LOGGER.info("Angel Is Online")
         updater.start_polling(timeout=15, read_latency=4, drop_pending_updates=True, allowed_updates=Update.ALL_TYPES)
 
     if len(argv) not in (1, 3, 4):
