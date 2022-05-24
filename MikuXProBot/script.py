@@ -15,7 +15,7 @@ MIKU_N_IMG = (
       "https://telegra.ph/file/1d48acf76800bc82e867a.jpg",
       "https://telegra.ph/file/c641abcfbd0169b7ed48e.jpg",
       "https://telegra.ph/file/43fb7a717d1d4acce391c.jpg",
-      "https://telegra.ph/file/f1912776dda151964fd53.jpg
+      "https://telegra.ph/file/f1912776dda151964fd53.jpg",
 
 )
 
